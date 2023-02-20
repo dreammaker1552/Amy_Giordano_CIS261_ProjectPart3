@@ -39,12 +39,29 @@ while True:
     print("Net Pay: $", net_pay)
     print("")
 
+    # Add to totals
+    total_employees += 1
+    total_hours += hours_worked
+    total_gross_pay += gross_pay
+    total_income_tax += income_tax
+    total_net_pay += net_pay
+
+# Display payroll summary
+print("Payroll Summary")
+print("From Date: [Insert From Date]")
+print("To Date: [Insert To Date]")
+print("Total Number of Employees:", total_employees)
+print("Total Hours Worked:", total_hours)
+print("Total Gross Pay: $", total_gross_pay)
+print("Total Income Taxes: $", total_income_tax)
+print("Total Net Pay: $", total_net_pay)
+
     # Write the record to the text file
-    record = f"{current_date}|{name}|{hours_worked}|{hourly_rate}|{tax_rate}"
-    file.write(record + "\n")
+record = f"{current_date}|{name}|{hours_worked}|{hourly_rate}|{tax_rate}"
+file.write(record + "\n")
 
     # Add to payroll data list
-    payroll_data.append([current_date, name, hours_worked, hourly_rate, tax_rate, gross_pay, income_tax, net_pay])
+payroll_data.append([current_date, name, hours_worked, hourly_rate, tax_rate, gross_pay, income_tax, net_pay])
 
 # Close the text file
 file.close()
@@ -83,5 +100,19 @@ def calculate_payroll(from_date):
             print("Gross Pay: $", gross_pay)
             print("Income Tax Rate:", tax_rate, "%")
 
+# Add to totals
+total_employees += 1
+total_hours += hours_worked
+total_gross_pay += gross_pay
+total_income_tax += income_tax
+total_net_pay += net_pay
 
-
+# Display payroll summary
+print("Payroll Summary")
+print("From Date: [Insert From Date]")
+print("To Date: [Insert To Date]")
+print("Total Number of Employees:", total_employees)
+print("Total Hours Worked:", total_hours)
+print("Total Gross Pay: $", total_gross_pay)
+print("Total Income Taxes: $", total_income_tax)
+print("Total Net Pay: $", total_net_pay)
